@@ -5,6 +5,7 @@ import SecPartners from "../components/SecPartners";
 import NavbarFooterHomeLayout from "../layout/NavbarFooterHomeLayout";
 import SecBanner from "../components/SecBanner";
 import SecAboutUs from "../components/SecAboutUs";
+import SecEvent from "../components/SecEvent";
 
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <SecBanner/>
       <SecAboutUs />
       <SecRegional />
+      <SecEvent />
       <SecPartners />
     </NavbarFooterHomeLayout>
     </>
