@@ -7,8 +7,7 @@ type DataProps = {
 }
 
 export default function CardAbout(props: DataProps) {
-  const addTitle = props.title ? ` ${props.title}` : "";
-  const addDesc = props.desc ? ` ${props.desc}` : "";
+  const {title,desc} = props;
 
   return (
     <div className="w-full p-5 bg-[#EC407A] rounded-lg group hover:bg-[#ec4079d4]">
@@ -22,12 +21,12 @@ export default function CardAbout(props: DataProps) {
           />
         </div>
         <div className="py-2 space-x-4 group-hover:pt-0">
-          <h2 className="font-bold text-lg text-white font-mulish">{`${addTitle}`}</h2>
+          <h2 className="font-bold text-lg text-white font-mulish">{title}</h2>
         </div>
         <div className="space-x-4 group-hover:pt-0">
           <hr className="hidden group-hover:block h-px w-40 bg-gray-200 border-0"></hr>
         </div>
-        <div className="pt-2 hidden group-hover:block group-hover:text-white group-hover:text-xs font-montserrat"><p>{`${addDesc}`}</p></div>
+        <div className="pt-2 hidden group-hover:block group-hover:text-white group-hover:text-xs font-montserrat"><p>{desc}</p></div>
       </div>
     </div>
   )
