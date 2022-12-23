@@ -18,7 +18,7 @@ export default function SecPartners() {
       <div className="container mx-auto justify-center text-center flex flex-wrap">
         <h2 className="font-bold text-4xl font-mulish mb-5">PARTNERS</h2>
       </div>
-      <div className="p-10">
+      <div className="p-5 md:p-10 lg:p-10">
         <Swiper
             spaceBetween={20}
             onSlideChange={() => console.log('slide change')}
