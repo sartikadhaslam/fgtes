@@ -1,81 +1,194 @@
-import Image from "next/image";
+import Image from 'next/image'
+
+import React, { useRef, useState } from "react";
+// eslint-disable-next-line
+import "swiper/css/bundle";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay} from "swiper";
 
 export default function SecPartners() {
   return (
-    <section className="bg-[FDECF2] -mt-10 relative" id="partners">
+    <section className="-mt-10 relative" id="partners">
       <div className="container mx-auto justify-center text-center flex flex-wrap">
-        <div className="w-full">
-          <h2 className="font-bold pt-20 text-4xl font-mulish">PARTNERS</h2>
-          <div className="container mx-auto mt-10 mb-10 md:px-80 md:pt-8">
-            <div className="grid grid-cols-2 justify-items-center md:grid-cols-3 md:gap-x-32 md:gap-y-16">
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/alkademi-dark.png"
-                  alt="Partners picture"
-                  height={25}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/aws.png"
-                  alt=""
-                  height={50}
-                  width={70}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/Bukalapak.png"
-                  alt=""
-                  height={30}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/Logo_Telkom_Indonesia_2013.png"
-                  alt=""
-                  height={50}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/microsoft-logo-png-2398.png"
-                  alt=""
-                  height={50}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/Nivea.png"
-                  alt=""
-                  height={50}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/tech-in-asia-logo-vector.jpg"
-                  alt=""
-                  height={30}
-                  width={100}
-                />
-              </div>
-              <div className="block p-3 bg-white">
-                <Image 
-                  src="/partners/tokopedia-38840.png"
-                  alt=""
-                  height={30}
-                  width={100}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2 className="font-bold text-4xl font-mulish mb-5">PARTNERS</h2>
       </div>
+      <div className="p-10">
+        <Swiper
+            spaceBetween={20}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+
+            breakpoints={{
+              320: {
+                width: 320,
+                slidesPerView: 2,
+              },
+              480: {
+                width: 480,
+                slidesPerView: 3,
+              },
+              600: {
+                width: 600,
+                slidesPerView: 3,
+              },
+              768: {
+                width: 768,
+                slidesPerView: 4,
+              },
+              900: {
+                width: 900,
+                slidesPerView: 4,
+              },
+              1024: {
+                width: 1024,
+                slidesPerView: 5,
+              },
+              1200: {
+                width: 1200,
+                slidesPerView: 5,
+              },
+            }}
+        >
+          <SwiperSlide>
+            <Image 
+              src="/partners/alkademi-dark.png"
+              alt="Alkademi"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/Bukalapak.png"
+              alt="Bukalapak"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/DailySocial.png"
+              alt="DailySocial"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/geekHunter.png"
+              alt="DailySocial"
+              height={40}
+              width={120}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/tokopedia.png"
+              alt="DailySocial"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/Telkom.png"
+              alt="DailySocial"
+              height={30}
+              width={110}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/tech-in-asia.jpg"
+              alt="DailySocial"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/aws.png"
+              alt="DailySocial"
+              height={25}
+              width={70}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/microsoft.jpg"
+              alt="Microsoft"
+              height={50}
+              width={150}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/Nivea.png"
+              alt="Nivea"
+              height={25}
+              width={75}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/livintelkom.jpg"
+              alt="Livin in Telkom"
+              height={25}
+              width={75}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/jakbee.png"
+              alt="Jakbee"
+              height={50}
+              width={100}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/phpid.png"
+              alt="PHP ID"
+              height={50}
+              width={100}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/devC.jpg"
+              alt="Developer Circle"
+              height={50}
+              width={200}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image 
+              src="/partners/womenintech.png"
+              alt="Women in Tech"
+              height={50}
+              width={100}
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <style>
+        {`
+        .swiper-wrapper{
+          text-align: -webkit-center;
+        }
+        `}
+      </style>
     </section>
   )
 }

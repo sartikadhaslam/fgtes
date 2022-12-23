@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 export default function SecEvent() {
   return (
-    <section className="mt-10 md:mt-20 relative" id="event">
+    <section className="mt-10 md:mt-10 relative" id="event">
       <div className="container mx-auto justify-center text-center flex flex-wrap">
         <h2 className="font-bold text-4xl font-mulish">EVENT</h2>
       </div>
